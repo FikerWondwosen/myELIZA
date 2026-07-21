@@ -1,7 +1,9 @@
 #include <iostream>
 #include <regex>
 #include <string>
+#include <vector>
 
+#include "conversation.h"
 
 using namespace std;
 
@@ -11,12 +13,17 @@ int main()
 
     string input;
 
-    cout << "say some: ";
+    while(input != "end")
+    {   cout << "you: ";
+        getline(cin,input);
+        cout << endl;
+
+        cout << "myELIZA: "<<genericResp(input) << endl;
+        cout << endl;
+
+    }
     
-    getline(cin,input);
-
-    cout << "you said: " << input << endl;
-
+    
 
     return 0;
 }
