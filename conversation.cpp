@@ -18,8 +18,7 @@ string getResponse(string& input , vector<string>& prevInput){
     }
     else{
         return "sorry, I didn't understand";
-    }
-    
+    }    
     
 }
 
