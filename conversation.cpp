@@ -1,12 +1,42 @@
 #include "conversation.h"
 
-// string getResponse(string& input , vector<string>& prevInput){
+string getResponse(string& input , vector<string>& prevInput){
+
+    if(isRepeated(input, prevInput))
+    {
+        return "You said this earler, why does it matter to you?";
+    }
 
 
-//     prevInput.push_back(input);
+    prevInput.push_back(input);
+
+    string response = genericResp(input);
+
+    if(response != "")
+    {
+        return response;
+    }
+    else{
+        return "sorry, I didn't understand";
+    }
     
     
-// }
+}
+
+bool isRepeated(string& input, vector<string>& prevInput){
+
+    for(int i = 0; i < prevInput.size(); i++)
+    {
+        if(prevInput[i] == input)
+        {
+            return true;
+        }
+    }
+
+    return false;
+
+
+}
 
 string genericResp(const string& text){
 

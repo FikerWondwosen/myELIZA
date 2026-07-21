@@ -8,8 +8,13 @@
 
 using namespace std;
 
-//string getResponse(string input , vector<string> prevInput);
 
+
+
+
+string getResponse(string& input , vector<string>& prevInput);
+
+bool isRepeated(string& input, vector<string>& prevInput);
 
 
 string genericResp(const string& text); //used for responding to generic conversations like travel, purchase, etc..
